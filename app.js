@@ -8,6 +8,14 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+// connect to db
+const mongoose = require('mongoose');
+const mongoDB = process.env.mongodb_url;
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error!'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
