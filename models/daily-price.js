@@ -4,9 +4,10 @@ const Schema = mongoose.Schema;
 
 const DailyPriceSchema = new Schema({
   date: { type: Date, default: Date.now },
-  price: Number,
+  original: Number,
+  sale: Number,
   region: [{ type: Schema.Types.ObjectId, ref: 'Region' }],
   platform: [{ type: Schema.Types.ObjectId, ref: 'Platform' }]
 });
 
-module.exports = mongoose.model('DailyPrice', DailyPriceSchema );
+module.exports = mongoose.model('DailyPrice', DailyPriceSchema);

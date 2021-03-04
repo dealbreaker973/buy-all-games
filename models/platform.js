@@ -6,4 +6,4 @@ const PlatformSchema = new Schema({
     name: String,
 });
 
-module.exports = mongoose.model('Platform', PlatformSchema );
+module.exports = mongoose.model('Platform', PlatformSchema);

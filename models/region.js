@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const RegionSchema = new Schema({
-    name: String,
+    code: String,
+    country: String,
     default_currency: String,
 });
 
-module.exports = mongoose.model('Region', RegionSchema );
+module.exports = mongoose.model('Region', RegionSchema);
