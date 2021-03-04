@@ -6,3 +6,8 @@ see how much does it cost to buy all games in the world
 npm install
 npm start
 ```
+
+## Get latest data
+```bash
+node --harmony -r dotenv/config update_database.js
+```
